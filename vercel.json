@@ -10,5 +10,14 @@
       "src": "/(.*)",
       "dest": "api/index.py"
     }
+  ],
+  "crons": [
+    {
+      "path": "/admin/revert_to_ai",
+      "schedule": "*/2 * * * *",
+      "headers": {
+          "X-Admin-API-Key": "@admin_secret_key"
+      }
+    }
   ]
 }
